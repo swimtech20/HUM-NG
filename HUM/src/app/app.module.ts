@@ -8,9 +8,11 @@ import { ManagementModule } from './modules/management/management.module';
 import { NgModule } from '@angular/core';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { LoginComponent } from './core/pages/login/login.component';
+import { LogoutComponent } from './core/pages/logout/logout.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NotFoundComponent],
+  declarations: [AppComponent, HeaderComponent, NotFoundComponent, LoginComponent, LogoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,1 +1,17 @@
+@import "/node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/icons";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/variables";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/core";
+
 /* You can add global styles to this file, and also import other style files */
+* {
+  clear: initial;
+}
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}

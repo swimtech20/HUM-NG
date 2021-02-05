@@ -1,4 +1,42 @@
-<p>header works!</p>
-
-<hr />
-<hr />
+<div id="headerMain">
+  <div id="topBar">
+    <div id="topBarContent">
+      <h1 id="headerTitle">H.U.M.</h1>
+      <h4 id="headerSubTitle">
+        A place for all your house coordinating needs.
+      </h4>
+    </div>
+  </div>
+  <div id="linkBar">
+    <nav id="navBar">
+      <ul id="links">
+        <li class="nav-li">
+          <a class="nav-link" [routerLink]="'/home'">Home</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" [routerLink]="'/home/reservations'"
+            >Reservations</a
+          >
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" [routerLink]="'/manage/' + dummyHouseID"
+            >Manage</a
+          >
+        </li>
+        <li *ngIf="showEggs" class="nav-li">
+          <a class="nav-link" [routerLink]="'/bonus/ng-start'">Bonus</a>
+        </li>
+      </ul>
+    </nav>
+    <button (click)="showEggs = !showEggs">What's this?!</button>
+    <div id="userActions">
+      <button id="profileIcon">
+        <i class="fas fa-user"></i>
+      </button>
+      <div id="profileOptions">
+        <a>Profile</a>
+        <a>Log Out</a>
+      </div>
+    </div>
+  </div>
+</div>

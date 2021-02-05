@@ -5,6 +5,7 @@ import { HomeComponent } from './modules/house/pages/home/home.component';
 import { ManageComponent } from './modules/management/pages/manage/manage.component';
 import { NgModule } from '@angular/core';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
+import { ReservationsComponent } from './modules/house/pages/reservations/reservations.component';
 import { UserProfileComponent } from './modules/shared/components/user-profile/user-profile.component';
 
 const routes: Routes = [
@@ -17,10 +18,19 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'home/reservations',
+    component: ReservationsComponent,
+  },
+  {
     path: 'manage/:houseID',
+    // TODO remove houseID from route and put houseID in the store (set during login)
     component: ManageComponent,
   },
-  { path: 'profile/:userID', component: UserProfileComponent },
+  {
+    path: 'profile/:userID',
+    // TODO remove userID from route and put userID in the store (set during login)
+    component: UserProfileComponent,
+  },
   {
     path: 'bonus/ng-start',
     component: AngularStartComponent,

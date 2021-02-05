@@ -1,0 +1,123 @@
+@import "/src/styles/variables";
+@import "/src/styles/mixins";
+
+#headerMain {
+  div#topBar {
+    height: 125px;
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+
+    #topBarContent {
+      min-height: 100%;
+      @include flex(center, center, column);
+
+      #headerTitle {
+        width: 25%;
+        text-align: center;
+      }
+
+      #headerSubTitle {
+        width: 75%;
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+  }
+
+  #linkBar {
+    @include flex(space-between, center);
+    height: 50px;
+    background-color: $gray;
+    color: white;
+
+    nav#navBar {
+      height: 100%;
+      max-width: 75%;
+
+      ul#links {
+        @include flex(flex-start, center);
+        height: 100%;
+        list-style: none;
+        margin: 0;
+
+        .nav-li {
+          @include flex(center, center);
+          width: 150px;
+          height: 95%;
+          border-width: 1px 0 1px 1px;
+          border-color: #000;
+          border-style: solid;
+
+          &:last-child {
+            border-right: 1px solid #000;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: darken($gray, 15%);
+            border-bottom: 4px solid $secondary-color;
+          }
+
+          .nav-link {
+            @include flex(center, center);
+            text-decoration: none;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    #userActions {
+      width: 5%;
+      min-width: 20px;
+      float: right;
+      margin-right: 40px;
+
+      &:hover {
+        #profileOptions {
+          display: block;
+        }
+      }
+
+      #profileIcon {
+        i {
+          font-size: 20px;
+          width: 100%;
+        }
+      }
+
+      #profileOptions {
+        display: none;
+        position: absolute;
+        right: 61px;
+        background-color: $gray;
+        width: 100px;
+        box-shadow: -4px -4px 8px 4px rgba(42, 42, 42, 0.5),
+          0 6px 20px 0 rgba(0, 0, 0, 0.25);
+
+        a {
+          @include flex(center, center);
+          text-decoration: none;
+          height: 40px;
+          padding: 5px;
+          color: #fff;
+          border-width: 1px 1px 0 1px;
+          border-color: #000;
+          border-style: solid;
+
+          &:last-child {
+            border-bottom: 1px solid #000;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: darken($gray, 15%);
+            border-left: 4px solid $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

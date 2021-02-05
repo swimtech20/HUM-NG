@@ -1,14 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { LinksComponent } from './components/links/links.component';
-
-
+import { NgModule } from '@angular/core';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
-  declarations: [HeaderComponent, LinksComponent],
-  imports: [
-    CommonModule
-  ]
+  declarations: [UserProfileComponent],
+  imports: [CommonModule],
 })
-export class SharedModule { }
+export class SharedModule {}

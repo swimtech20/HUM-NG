@@ -1,5 +1,7 @@
 # HUM-NG
-Angular CLI for HUM
+##### House Utility Manager... in Angular!
+Developed by: Gage Gibson, Caleb LaVergne, Jayme Brock
+
 
 ## Tools to use
 - IDE: Visual Studio Code (VSC)
